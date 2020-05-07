@@ -231,5 +231,21 @@ public class UsuarioController implements Serializable {
         }
 
     }
+    //---- Se crea este metodo para la validación de los datos del usuario --//
 
+    public String validarUsuario() {
+        String codigoUsuario = current.getUsuario();
+        String clave = current.getPassword();
+        try {
+            current = ejbFacade.validarUsuario(codigoUsuario, clave);
+        } finally {
+            if (current == null) {
+                current = new Usuario();
+                JsfUtil.addErrorMessage("Usuario y/o Clave Invalida");
+                return null;
+            }
+            JsfUtil.addSuccessMessage("Bienvenid@ " + current.getNombre());
+            return "/vista/productosresibidos/List.xhtml";
+        }
+    }
 }
