@@ -21,8 +21,17 @@
     <welcome-file-list>
         <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>
+<<<<<<< HEAD
         <context-param>
         <param-name>primefaces.THEMES</param-name>
+=======
+    <context-param>    
+        <context-param>
+            <param-name>primefaces.THEME</param-name>
+            <param-value>start</param-value>
+        </context-param> 
+        <param-name>primefaces.THEME</param-name>
+>>>>>>> 8e5ca3f68acd56a5e986504ec5b19e7bb14f8cef
         <param-value>mint-choc</param-value>
     </context-param> 
 </web-app>
