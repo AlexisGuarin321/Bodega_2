@@ -120,7 +120,6 @@ public class Provedor implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Provedor[ idProvedor=" + idProvedor + " ]";
-    }
-    
+        return idPersona.getNombre() + idPersona.getApellido();
+    }    
 }

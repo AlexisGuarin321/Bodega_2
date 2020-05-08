@@ -18,9 +18,9 @@
                             <div class="ui-fluid">
                                 <p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
                                     <h:outputLabel style="text-align: left" value="#{bundle.CreateCiudadLabel_ciudad}" for="ciudad" />
-                                    <h:inputText style="text-align: left;border-radius:5px" id="ciudad" value="#{ciudadController.selected.ciudad}" title="#{bundle.CreateCiudadTitle_ciudad}" required="true" requiredMessage="#{bundle.CreateCiudadRequiredMessage_ciudad}"/>
+                                    <h:inputText style="text-align: left;border-radius:5px; height: 15px" id="ciudad" value="#{ciudadController.selected.ciudad}" title="#{bundle.CreateCiudadTitle_ciudad}" required="true" requiredMessage="#{bundle.CreateCiudadRequiredMessage_ciudad}"/>
                                     <h:outputLabel style="text-align: left; " value="#{bundle.CreateCiudadLabel_idDepartamento}" for="idDepartamento" />
-                                    <h:selectOneMenu style="text-align: left;border-radius:5px" id="idDepartamento" value="#{ciudadController.selected.idDepartamento}" title="#{bundle.CreateCiudadTitle_idDepartamento}" required="true" requiredMessage="#{bundle.CreateCiudadRequiredMessage_idDepartamento}">
+                                    <h:selectOneMenu style="text-align: left;border-radius: 5px; height: 15px" id="idDepartamento" value="#{ciudadController.selected.idDepartamento}" title="#{bundle.CreateCiudadTitle_idDepartamento}" required="true" requiredMessage="#{bundle.CreateCiudadRequiredMessage_idDepartamento}">
                                         <f:selectItems value="#{departamentoController.itemsAvailableSelectOne}"/>
                                     </h:selectOneMenu>
                                 </p:panelGrid>

@@ -3,6 +3,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.AppName}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form>
+                <div align="center" >
+                    <p:panel style="min-width: 200px; max-width: 1200px;  border: 0px; font-size: 12px;">
+                        <p:panel header="#{bundle.CreateClasificacionTitle}">
+                            <div class="ui-fluid">
+                                <p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
+                                    <h:outputLabel style="text-align: left" value="#{bundle.CreateClasificacionLabel_nit}" for="nit" />
+                                    <h:inputText style="border-radius: 5px; height: 15px" id="nit" value="#{clasificacionController.selected.nit}" title="#{bundle.CreateClasificacionTitle_nit}" required="true" requiredMessage="#{bundle.CreateClasificacionRequiredMessage_nit}"/>
+                                    <h:outputLabel style="text-align: left" value="#{bundle.CreateClasificacionLabel_rol}" for="rol" />
+                                    <h:inputText style="border-radius: 5px; height: 15px" id="rol" value="#{clasificacionController.selected.rol}" title="#{bundle.CreateClasificacionTitle_rol}" required="true" requiredMessage="#{bundle.CreateClasificacionRequiredMessage_rol}"/>
+                                </p:panelGrid>
+                            </div>
+                        </p:panel>
+                        <f:facet name="footer">
+                            <div align="center">
+                                <p:commandButton style="max-width: 150px;" id="createButtonA" icon="ui-icon-plus" process="@all" styleClass="button" ajax="false" action="#{departamentoController.create}" value="#{bundle.Asignar}"/>
+                                <p:commandButton style="max-width: 150px;" id="createButtonR" icon="ui-icon-plus" process="@all" styleClass="button" ajax="false" action="#{departamentoController.prepareList}" value="#{bundle.Regresar}" immediate="true"/>
+                            </div>
+                        </f:facet>
+                    </p:panel>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:composition template="/template.xhtml">
@@ -17,10 +57,6 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateClasificacionLabel_idClasificacion}" for="idClasificacion" />
                     <h:inputText id="idClasificacion" value="#{clasificacionController.selected.idClasificacion}" title="#{bundle.CreateClasificacionTitle_idClasificacion}" required="true" requiredMessage="#{bundle.CreateClasificacionRequiredMessage_idClasificacion}"/>
-                    <h:outputLabel value="#{bundle.CreateClasificacionLabel_nit}" for="nit" />
-                    <h:inputText id="nit" value="#{clasificacionController.selected.nit}" title="#{bundle.CreateClasificacionTitle_nit}" required="true" requiredMessage="#{bundle.CreateClasificacionRequiredMessage_nit}"/>
-                    <h:outputLabel value="#{bundle.CreateClasificacionLabel_rol}" for="rol" />
-                    <h:inputText id="rol" value="#{clasificacionController.selected.rol}" title="#{bundle.CreateClasificacionTitle_rol}" required="true" requiredMessage="#{bundle.CreateClasificacionRequiredMessage_rol}"/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{clasificacionController.create}" value="#{bundle.CreateClasificacionSaveLink}" />
