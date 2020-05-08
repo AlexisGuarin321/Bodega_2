@@ -104,7 +104,7 @@
 
     </h:head>
     <h:body>
-        
+
         <p:growl id="growl" life="3000" />
 
         <p:layout fullPage="true">
@@ -143,7 +143,7 @@
                                 </p:submenu>
                                 <p:submenu label="Tallas">
                                     <p:submenu label="Hombre">
-                                        <p:menuitem ajax="false" action="/vista/tallasHombreSuerior/List.xhtml" value="#{bundle.MenuItemTallasHombreSuperior}"> </p:menuitem>
+                                        <p:menuitem ajax="false" action="/vista/tallasHombreSuperior/List.xhtml" value="#{bundle.MenuItemTallasHombreSuperior}"> </p:menuitem>
                                         <p:menuitem ajax="false" action="/vista/tallasHombreInferior/List.xhtml" value="#{bundle.MenuItemTallasHombreInferior}"> </p:menuitem>
                                     </p:submenu>
                                     <p:submenu label="Mujer">
@@ -159,10 +159,11 @@
                                         <p:menuitem ajax="false" action="/vista/tallasNiñaInferior/List.xhtml" value="#{bundle.MenuItemTallasNiñaInferior}"> </p:menuitem>
                                     </p:submenu>
                                 </p:submenu>
-
-
                                 <p:submenu label="Mas">
-                                <p:menuitem value="#{bundle.MenuItemHome}"  icon="ui-icon-power" action="/index?faces-redirect=true" />
+                                    <p:menuitem ajax="false" action="/vista/usuario/List.xhtml" value="#{bundle.MenuItemUsuario}"> </p:menuitem>
+                                    <p:menuitem ajax="false" action="/vista/personas/List.xhtml" value="#{bundle.MenuItemPersonas}"> </p:menuitem>
+                                    <p:menuitem ajax="false" action="/vista/provedor/List.xhtml" value="#{bundle.MenuItemProveedor}"> </p:menuitem>
+                                    <p:menuitem value="#{bundle.MenuItemHome}"  icon="ui-icon-power" action="/index?faces-redirect=true" />
                                 </p:submenu>   
 
                             </p:menubar>

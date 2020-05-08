@@ -42,7 +42,8 @@
                                                     <h:outputText value="#{bundle.ListTallasNiñaSuperiorTitle_contornoCintura}"/>
                                                 </f:facet>
                                                 <h:outputText value="#{item.contornoCintura}"/>
-                                            </p:column><h:column>
+                                            </p:column>
+                                            <p:column>
                                                 <f:facet name="header">
                                                     <h:outputText value="#{bundle.ListTallasNiñaSuperiorTitle_idTallaNiñaSuperior}"/>
                                                 </f:facet>
@@ -67,7 +68,8 @@
                                                 <h:outputText value="#{item.contornoCintura}"/>
                                             </p:column>
 
-
+                                            <!---Comento esto porque no quiero que se agregen mas tallas------>
+                                            <!----
                                             <f:facet name="footer">
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{tallasNiñaSuperiorController.prepareCreate}" value="#{bundle.ListTallasNiñaSuperiorCreateLink}"/>
@@ -77,7 +79,7 @@
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{tallasNiñaSuperiorController.prepareCreate}" value="#{bundle.ListTallasNiñaSuperiorCreateLink}"/>
                                                 </div>
-                                            </f:facet>
+                                            </f:facet>--->
                                         </p:dataTable>
                                     </div>
                                 </p:panel>

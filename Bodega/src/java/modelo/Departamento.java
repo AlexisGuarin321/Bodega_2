@@ -109,7 +109,7 @@ public class Departamento implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Departamento[ idDepartamento=" + idDepartamento + " ]";
+        return nombre;
     }
     
 }

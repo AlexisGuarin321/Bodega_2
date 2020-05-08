@@ -123,7 +123,6 @@ public class Clasificacion implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Clasificacion[ idClasificacion=" + idClasificacion + " ]";
-    }
-    
+        return rol + Personas_.idPersona.getName();
+    }  
 }

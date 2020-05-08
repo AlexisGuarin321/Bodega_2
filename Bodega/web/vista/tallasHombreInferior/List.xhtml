@@ -56,7 +56,8 @@
                                                 <h:outputText value="#{item.idTalla}"/>
                                             </p:column>
 
-
+                                            <!---Comento esto porque no quiero que se agregen mas tallas------>
+                                            <!----
                                             <f:facet name="footer">
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{tallasHombreInferiorController.prepareCreate}" value="#{bundle.ListTallasHombreInferiorCreateLink}"/>
@@ -66,7 +67,7 @@
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{tallasHombreInferiorController.prepareCreate}" value="#{bundle.ListTallasHombreInferiorCreateLink}"/>
                                                 </div>
-                                            </f:facet>
+                                            </f:facet>----->
                                         </p:dataTable>
                                     </div>
                                 </p:panel>

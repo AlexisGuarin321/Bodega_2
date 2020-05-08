@@ -122,7 +122,7 @@ public class Ciudad implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Ciudad[ idCiudad=" + idCiudad + " ]";
+        return ciudad;
     }
     
 }
