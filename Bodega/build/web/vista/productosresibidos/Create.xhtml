@@ -14,37 +14,37 @@
             <h:form>
                 <div align="center" >
                     <p:panel style="min-width: 200px; max-width: 1200px;  border: 0px; font-size: 12px;">
-                        <p:panel header="#{bundle.libro}">
+                        <p:panel header="#{bundle.CreateProductosresibidosTitle}">
                             <div class="ui-fluid">
                                 <p:panelGrid columns="6" columnClasses="ui-grid-col-4,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_fechaResivido}" for="fechaResivido" />
-                                    <h:inputText id="fechaResivido" value="#{productosresibidosController.selected.fechaResivido}" title="#{bundle.CreateProductosresibidosTitle_fechaResivido}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_fechaResivido}">
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_fechaResivido}" for="fechaResivido" />
+                                    <p:inputText id="fechaResivido" value="#{productosresibidosController.selected.fechaResivido}" title="#{bundle.CreateProductosresibidosTitle_fechaResivido}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_fechaResivido}">
                                         <f:convertDateTime pattern="MM/dd/yyyy" />
-                                    </h:inputText>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_ref}" for="ref" />
-                                    <h:inputText id="ref" value="#{productosresibidosController.selected.ref}" title="#{bundle.CreateProductosresibidosTitle_ref}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_ref}"/>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_cantidad}" for="cantidad" />
-                                    <h:inputText id="cantidad" value="#{productosresibidosController.selected.cantidad}" title="#{bundle.CreateProductosresibidosTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_cantidad}"/>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_valorUnidad}" for="valorUnidad" />
-                                    <h:inputText id="valorUnidad" value="#{productosresibidosController.selected.valorUnidad}" title="#{bundle.CreateProductosresibidosTitle_valorUnidad}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_valorUnidad}"/>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_valorTotal}" for="valorTotal" />
-                                    <h:inputText id="valorTotal" value="#{productosresibidosController.selected.valorTotal}" title="#{bundle.CreateProductosresibidosTitle_valorTotal}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_valorTotal}"/>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_idProducto}" for="idProducto" />
-                                    <h:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idProducto" value="#{productosresibidosController.selected.idProducto}" title="#{bundle.CreateProductosresibidosTitle_idProducto}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idProducto}">
+                                    </p:inputText>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_ref}" for="ref" />
+                                    <p:inputText id="ref" value="#{productosresibidosController.selected.ref}" title="#{bundle.CreateProductosresibidosTitle_ref}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_ref}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_cantidad}" for="cantidad" />
+                                    <p:inputText id="cantidad" value="#{productosresibidosController.selected.cantidad}" title="#{bundle.CreateProductosresibidosTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_cantidad}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_valorUnidad}" for="valorUnidad" />
+                                    <p:inputText id="valorUnidad" value="#{productosresibidosController.selected.valorUnidad}" title="#{bundle.CreateProductosresibidosTitle_valorUnidad}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_valorUnidad}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_valorTotal}" for="valorTotal" />
+                                    <p:inputText id="valorTotal" value="#{productosresibidosController.selected.valorTotal}" title="#{bundle.CreateProductosresibidosTitle_valorTotal}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_valorTotal}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_idProducto}" for="idProducto" />
+                                    <p:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idProducto" value="#{productosresibidosController.selected.idProducto}" title="#{bundle.CreateProductosresibidosTitle_idProducto}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idProducto}">
                                         <f:selectItems value="#{productoController.itemsAvailableSelectOne}"/>
-                                    </h:selectOneMenu>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_idProvedor}" for="idProvedor" />
-                                    <h:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idProvedor" value="#{productosresibidosController.selected.idProvedor}" title="#{bundle.CreateProductosresibidosTitle_idProvedor}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idProvedor}">
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_idProvedor}" for="idProvedor" />
+                                    <p:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idProvedor" value="#{productosresibidosController.selected.idProvedor}" title="#{bundle.CreateProductosresibidosTitle_idProvedor}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idProvedor}">
                                         <f:selectItems value="#{provedorController.itemsAvailableSelectOne}"/>
-                                    </h:selectOneMenu>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_idTalla}" for="idTalla" />
-                                    <h:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idTalla" value="#{productosresibidosController.selected.idTalla}" title="#{bundle.CreateProductosresibidosTitle_idTalla}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idTalla}">
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_idTalla}" for="idTalla" />
+                                    <p:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idTalla" value="#{productosresibidosController.selected.idTalla}" title="#{bundle.CreateProductosresibidosTitle_idTalla}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idTalla}">
                                         <f:selectItems value="#{tallasController.itemsAvailableSelectOne}"/>
-                                    </h:selectOneMenu>
-                                    <h:outputLabel value="#{bundle.CreateProductosresibidosLabel_idTipoProducto}" for="idTipoProducto" />
-                                    <h:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idTipoProducto" value="#{productosresibidosController.selected.idTipoProducto}" title="#{bundle.CreateProductosresibidosTitle_idTipoProducto}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idTipoProducto}">
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="#{bundle.CreateProductosresibidosLabel_idTipoProducto}" for="idTipoProducto" />
+                                    <p:selectOneMenu style="width: 150px; border-radius: 5px ;" id="idTipoProducto" value="#{productosresibidosController.selected.idTipoProducto}" title="#{bundle.CreateProductosresibidosTitle_idTipoProducto}" required="true" requiredMessage="#{bundle.CreateProductosresibidosRequiredMessage_idTipoProducto}">
                                         <f:selectItems value="#{tipoproductoController.itemsAvailableSelectOne}"/>
-                                    </h:selectOneMenu>
+                                    </p:selectOneMenu>
                                 </p:panelGrid>
                             </div>
                         </p:panel>

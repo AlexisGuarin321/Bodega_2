@@ -109,7 +109,7 @@ public class Tallas implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Tallas[ idTalla=" + idTalla + " ]";
+        return tipo;
     }
     
 }

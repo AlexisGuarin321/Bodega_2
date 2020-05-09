@@ -78,12 +78,12 @@
 
                                             <f:facet name="footer">
                                                 <div align="center">
-                                                    <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{productoentregadoController.prepareCreate}" value="#{bundle.ListProductoentregadoCreateLink}"/>
+                                                    <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{productoentregadoController.prepareCreate()}" value="#{bundle.ListProductoentregadoCreateLink}"/>
                                                 </div>
                                             </f:facet>
                                             <f:facet name="header">
                                                 <div align="center">
-                                                    <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{productoentregadoController.prepareCreate}" value="#{bundle.ListProductoentregadoCreateLink}"/>
+                                                    <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{productoentregadoController.prepareEdit()}" value="#{bundle.EditProductoentregadoTitle}"/>
                                                 </div>
                                             </f:facet>
                                         </p:dataTable>

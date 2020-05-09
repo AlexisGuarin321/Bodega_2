@@ -3,6 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.AppName}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form>
+                <div align="center" >
+                    <p:panel style="min-width: 200px; max-width: 1200px;  border: 0px; font-size: 12px;">
+                        <p:panel header="#{bundle.CreateProductoentregadoTitle}">
+                            <div class="ui-fluid">
+                                <p:panelGrid columns="8" columnClasses="ui-grid-col-4,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_fechaEntrega}" for="fechaEntrega" />
+                                    <p:inputText id="fechaEntrega" value="#{productoentregadoController.selected.fechaEntrega}" title="#{bundle.CreateProductoentregadoTitle_fechaEntrega}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_fechaEntrega}">
+                                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                                    </p:inputText>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_ref}" for="ref" />
+                                    <p:inputText id="ref" value="#{productoentregadoController.selected.ref}" title="#{bundle.CreateProductoentregadoTitle_ref}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_ref}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_cantidad}" for="cantidad" />
+                                    <p:inputText id="cantidad" value="#{productoentregadoController.selected.cantidad}" title="#{bundle.CreateProductoentregadoTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_cantidad}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_iva}" for="iva" />
+                                    <p:inputText id="iva" value="#{productoentregadoController.selected.iva}" title="#{bundle.CreateProductoentregadoTitle_iva}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_iva}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_valorSubtotal}" for="valorSubtotal" />
+                                    <p:inputText id="valorSubtotal" value="#{productoentregadoController.selected.valorSubtotal}" title="#{bundle.CreateProductoentregadoTitle_valorSubtotal}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_valorSubtotal}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_valorTotal}" for="valorTotal" />
+                                    <p:inputText id="valorTotal" value="#{productoentregadoController.selected.valorTotal}" title="#{bundle.CreateProductoentregadoTitle_valorTotal}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_valorTotal}"/>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_idProducto}" for="idProducto" />
+                                    <p:selectOneMenu id="idProducto" value="#{productoentregadoController.selected.idProducto}" title="#{bundle.CreateProductoentregadoTitle_idProducto}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_idProducto}">
+                                        <f:selectItems value="#{productoController.itemsAvailableSelectOne}"/>
+                                    </p:selectOneMenu>
+                                    <p:outputLabel value="#{bundle.CreateProductoentregadoLabel_idTipoProducto}" for="idTipoProducto" />
+                                    <p:selectOneMenu id="idTipoProducto" value="#{productoentregadoController.selected.idTipoProducto}" title="#{bundle.CreateProductoentregadoTitle_idTipoProducto}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_idTipoProducto}">
+                                        <f:selectItems value="#{tipoproductoController.itemsAvailableSelectOne}"/>
+                                    </p:selectOneMenu>
+                                </p:panelGrid>
+                            </div>
+                        </p:panel>
+                        <f:facet name="footer">
+                            <div align="center">
+                                <p:commandButton style="max-width: 150px;" id="createButtonA" icon="ui-icon-plus" process="@all" styleClass="button" ajax="false" action="#{libroController.create}" value="#{bundle.Asignar}"/>
+                                <p:commandButton style="max-width: 150px;" id="createButtonR" icon="ui-icon-plus" process="@all" styleClass="button" ajax="false" action="#{libroController.prepareList}" value="#{bundle.Regresar}" immediate="true"/>
+                            </div>
+                        </f:facet>
+                    </p:panel>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:composition template="/template.xhtml">
@@ -17,28 +75,7 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_idProductoEntregado}" for="idProductoEntregado" />
                     <h:inputText id="idProductoEntregado" value="#{productoentregadoController.selected.idProductoEntregado}" title="#{bundle.CreateProductoentregadoTitle_idProductoEntregado}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_idProductoEntregado}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_fechaEntrega}" for="fechaEntrega" />
-                    <h:inputText id="fechaEntrega" value="#{productoentregadoController.selected.fechaEntrega}" title="#{bundle.CreateProductoentregadoTitle_fechaEntrega}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_fechaEntrega}">
-                        <f:convertDateTime pattern="MM/dd/yyyy" />
-                    </h:inputText>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_ref}" for="ref" />
-                    <h:inputText id="ref" value="#{productoentregadoController.selected.ref}" title="#{bundle.CreateProductoentregadoTitle_ref}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_ref}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_cantidad}" for="cantidad" />
-                    <h:inputText id="cantidad" value="#{productoentregadoController.selected.cantidad}" title="#{bundle.CreateProductoentregadoTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_cantidad}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_iva}" for="iva" />
-                    <h:inputText id="iva" value="#{productoentregadoController.selected.iva}" title="#{bundle.CreateProductoentregadoTitle_iva}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_iva}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_valorSubtotal}" for="valorSubtotal" />
-                    <h:inputText id="valorSubtotal" value="#{productoentregadoController.selected.valorSubtotal}" title="#{bundle.CreateProductoentregadoTitle_valorSubtotal}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_valorSubtotal}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_valorTotal}" for="valorTotal" />
-                    <h:inputText id="valorTotal" value="#{productoentregadoController.selected.valorTotal}" title="#{bundle.CreateProductoentregadoTitle_valorTotal}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_valorTotal}"/>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_idProducto}" for="idProducto" />
-                    <h:selectOneMenu id="idProducto" value="#{productoentregadoController.selected.idProducto}" title="#{bundle.CreateProductoentregadoTitle_idProducto}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_idProducto}">
-                        <f:selectItems value="#{productoController.itemsAvailableSelectOne}"/>
-                    </h:selectOneMenu>
-                    <h:outputLabel value="#{bundle.CreateProductoentregadoLabel_idTipoProducto}" for="idTipoProducto" />
-                    <h:selectOneMenu id="idTipoProducto" value="#{productoentregadoController.selected.idTipoProducto}" title="#{bundle.CreateProductoentregadoTitle_idTipoProducto}" required="true" requiredMessage="#{bundle.CreateProductoentregadoRequiredMessage_idTipoProducto}">
-                        <f:selectItems value="#{tipoproductoController.itemsAvailableSelectOne}"/>
-                    </h:selectOneMenu>
+
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{productoentregadoController.create}" value="#{bundle.CreateProductoentregadoSaveLink}" />

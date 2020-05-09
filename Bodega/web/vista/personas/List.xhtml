@@ -35,12 +35,12 @@
 
                                             <f:facet name="footer">
                                                 <div align="center">
-                                                    <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{estadoController.prepareCreate}" value="#{bundle.ListPersonasCreateLink}"/>
+                                                    <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{personasController.prepareCreate}" value="#{bundle.ListPersonasCreateLink}"/>
                                                 </div>
                                             </f:facet>
                                             <f:facet name="header">
                                                 <div align="center">
-                                                    <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{estadoController.prepareCreate}" value="#{bundle.ListPersonasCreateLink}"/>
+                                                    <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{personasController.prepareEdit()}" value="#{bundle.EditPersonasTitle}"/>
                                                 </div>
                                             </f:facet>
                                         </p:dataTable>

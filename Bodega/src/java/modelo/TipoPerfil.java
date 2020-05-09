@@ -107,7 +107,7 @@ public class TipoPerfil implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.TipoPerfil[ idTipoPerfil=" + idTipoPerfil + " ]";
+        return nombre;
     }
     
 }

@@ -18,7 +18,7 @@
                             <div class="col-sm-3 well">
                                 <p:panel header="#{bundle.NameDepartamento}">
                                     <div align="center">
-                                        <p:dataTable id="lalmeida"  reflow="true" value="#{departamentoController.items}" var="item" emptyMessage=" " selectionMode="single"  paginator="true"  rowKey="#{item.idDepartamento}" rows="20"  rowsPerPageTemplate="20,50,100">
+                                        <p:dataTable id="lalmeida"  reflow="true" value="#{departamentoController.items}" var="item" emptyMessage=" " selectionMode="single"  paginator="true"  rowKey="#{item.idDepartamento}" rows="20"  rowsPerPageTemplate="50,100">
                                             <p:column>
                                                 <f:facet name="header">
                                                     <h:outputText value="#{bundle.ListDepartamentoTitle_idDepartamento}"/>
@@ -32,9 +32,9 @@
                                                 <h:outputText value="#{item.nombre}"/>
                                             </p:column>
 
-                                           <!----- Lo comento porque no quiero que se agregen mas departamentos a mi base de datos---->
+                                           <!-- Lo comento porque no quiero que se agregen mas departamentos a mi base de datos -->
                                            
-                                           <!----<f:facet name="footer">
+                                           <!-- <f:facet name="footer">
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonR"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{departamentoController.prepareCreate}" value="#{bundle.ListDepartamentoCreateLink}"/>
                                                 </div>
@@ -43,7 +43,7 @@
                                                 <div align="center">
                                                     <p:commandButton style="max-width: 200px;" id="editButtonRe"   icon="ui-icon-pencil" process="@all" styleClass="button" ajax="false" action="#{departamentoController.prepareCreate}" value="#{bundle.ListDepartamentoCreateLink}"/>
                                                 </div>
-                                            </f:facet>------>
+                                            </f:facet> -->
                                         </p:dataTable>
                                     </div>
                                 </p:panel>

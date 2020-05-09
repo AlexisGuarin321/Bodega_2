@@ -104,19 +104,15 @@
 
     </h:head>
     <h:body>
-
         <p:growl id="growl" life="3000" />
-
         <p:layout fullPage="true">
             <p:layoutUnit position="north" size="25" header="#{bundle.AppName} #{usuarioController.selected.nombre}">
-
             </p:layoutUnit>
-
             <p:layoutUnit position="south" size="40">
                 <ui:insert name="footer"/>
                 <p:panelGrid columns="4"  >
                     <h:panelGroup styleClass="copyright" style="width: 75%; text-align:center; vertical-align: middle; " >
-                        <h:outputLabel value="© cies 2020" title="CIES" />  <a href="http://www.cies.edu.co">CIES</a>.
+                        <h:outputLabel value="© cies 2020" title="  CIES" />  <a href="http://www.cies.edu.co">CIES</a>.
                     </h:panelGroup>
                     <h:panelGroup styleClass="copyright" style="width: 75%; text-align:center; vertical-align: middle; " >
                         <h:outputLabel title="CIES" style="font-family: Arial ; font-size: 8px" value="CIES"/>
@@ -126,7 +122,6 @@
                     </h:panelGroup>  
                 </p:panelGrid>
             </p:layoutUnit>
-
             <p:layoutUnit position="center">
                 <h:form id="menuForm">
                     <div align="center">
@@ -164,17 +159,13 @@
                                     <p:menuitem ajax="false" action="/vista/personas/List.xhtml" value="#{bundle.MenuItemPersonas}"> </p:menuitem>
                                     <p:menuitem ajax="false" action="/vista/provedor/List.xhtml" value="#{bundle.MenuItemProveedor}"> </p:menuitem>
                                     <p:menuitem value="#{bundle.MenuItemHome}"  icon="ui-icon-power" action="/index?faces-redirect=true" />
-                                </p:submenu>   
-
+                                </p:submenu>
                             </p:menubar>
                         </p:panelGrid>
                     </div>
                 </h:form>
                 <ui:insert name="body"/>
             </p:layoutUnit>
-
         </p:layout>
-
     </h:body>
-
 </html>
